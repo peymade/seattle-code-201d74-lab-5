@@ -50,11 +50,32 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  // sum, the function you wroote above, will do the math for you!
+  // Use sum function to add first two variables
+  let doubleSumArray = sum(a,b);
+  // Extract just the sum from the array it creates
+  let doubleSum = doubleSumArray[0];
+  // Add extracted sum to 3rd variable, creating an array
+  let tripleSumArray = sum(doubleSum,c);
+
+  // Use multiply function to add first two variables
+  let doubleProductArray = multiply(a,b);
+  // Extract just the product from the array it creates 
+  let doubleProduct = doubleProductArray[0];
+  // Multiply extracted product to 3rd variable, creating an array
+  let tripleProductArray = multiply(doubleProduct,c);
+
+  // Extract new sum and product from array
+  let tripleSum = tripleSumArray[0];
+  let tripleProduct = tripleProductArray[0];
+
+  //Combine all into string
+  let tripleArray = [tripleSum, tripleProduct, a +' and ' +b+' and ' +c +' sum to ' +tripleSum +'.', 'The product of ' +a+' and ' +b+' and ' +c+' is ' + tripleProduct +'.'];
+  // console.log(tripleArray);
+  return tripleArray;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
