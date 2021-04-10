@@ -86,16 +86,32 @@ Write a function called sumArray() that takes in an array of numbers as its sing
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
+// varibale for sum of the numbers
+// variable for string "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+//I added 'second' to all my variable names, since the code is similar to the previous challenge. 
+
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(testArray) { //eslint-disable-line
 
+   // Use sum function to add first two variables
+   let doubleSumArraySecond = sum(testArray[0], testArray[1]);
+   // Extract just the sum from the array it creates
+   let doubleSumSecond = doubleSumArraySecond[0];
+   // Add extracted sum to 3rd variable, creating an array
+   let tripleSumArraySecond = sum(doubleSumSecond,testArray[2]);  
+    
+   // Extract new sum and product from array
+   let tripleSum = tripleSumArraySecond[0];
+
+  let challengeFourArray = [tripleSum, testArray[0] +','+ testArray[1] +','+ testArray[2] + ' was passed in as an array of numbers, and ' + tripleSum + ' is their sum.'];  
+  return challengeFourArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -105,6 +121,17 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 "The numbers 2,3,4 have a product of 24."
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+
+// // Use multiply function to add first two variables
+// let doubleProductArraySecond = multiply(testArray[0], testArray[1]);
+// // Extract just the product from the array it creates 
+// let doubleProductSecond = doubleProductArraySecond[0];
+// // Multiply extracted product to 3rd variable, creating an array
+// let tripleProductArraySecond = multiply(doubleProductSecond,testArray[2]);
+
+// let tripleProduct = tripleProductArraySecond[0];
+
+
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
